@@ -9,7 +9,6 @@ const toDoList = document.querySelector(".todoList");
 const header = document.querySelector("header");
 const number = document.createElement("p");
 
-
 const todoListArray = [];
 //console.log(todoListArray); //verify*********
 
@@ -60,7 +59,7 @@ function addingTask(event) {
     toDoList.appendChild(todoDiv);
 
     //adding the task to the Array and display in the console
-   
+
     todoListArray.push(todoDiv);
 
     console.log(todoListArray);
@@ -83,12 +82,10 @@ function eventClick(e) {
     parent.remove();
 
     children = parent.children[0];
-  // console.log(children);
+    // console.log(children);
 
     for (let i = 0; i < todoListArray.length; i++) {
       if (parent == todoListArray[i]) {
-
-
         //remove one div from the array in that Index
         todoListArray.splice([i], 1);
         console.log(todoListArray);
@@ -113,11 +110,9 @@ function eventClick(e) {
   }
 }
 
+//this funtion will set the counter to cero everytime that a new task is typed
 
-//this funtion will set the counter to cero everytime that a new task is typed 
-
-function myCounter(){
-
-number.textContent = 0;
+function myCounter() {
+  number.textContent = 0;
   header.append(number);
 }
