@@ -20,6 +20,8 @@ toDoButton.addEventListener("click", addingTask);
 //checking in which part of the list the user is clicking
 toDoList.addEventListener("click", eventClick);
 
+toDoInput.addEventListener("blur", myCounter);
+
 //Functions
 
 function addingTask(event) {
@@ -109,4 +111,13 @@ function eventClick(e) {
       }
     }
   }
+}
+
+
+//this funtion will set the counter to cero everytime that a new task is typed 
+
+function myCounter(){
+
+number.textContent = 0;
+  header.append(number);
 }
